@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sar.crm",
+      "nativeLanguage": "fa"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "simpleCRM",
+    "packageName": "com.sar.crm",
+    "packageFolder": "com/sar/crm",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NjllMDc3NmM1YzkyZmYxNjNkOTI1MjY0ZDY0NzkxYmYyNmU2MDQ1NTNkZGRlNGFhMzkzNGE1NmUzOTM5MzllYmJkZDlhNTQ4MmZhZTRiZTk5OTBkMzg4ZWRlOWRiOGFiYTI2YjZlYWUxYjY1MjZjNGRhYmY1MWUyYTgwZDFlZmU=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "flatly",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1602828492343,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fa",
+    "languages": ["fa", "en"],
+    "blueprints": []
+  }
+}
