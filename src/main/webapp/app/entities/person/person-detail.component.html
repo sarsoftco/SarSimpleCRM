@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="person">
+            <h2><span jhiTranslate="simpleCrmApp.person.detail.title">Person</span> {{ person.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="simpleCrmApp.person.name">Name</span></dt>
+                <dd>
+                    <span>{{ person.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.birthDate">Birth Date</span></dt>
+                <dd>
+                    <span>{{ person.birthDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.sex">Sex</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'simpleCrmApp.SexEnum.' + person.sex }}">{{ person.sex }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.address">Address</span></dt>
+                <dd>
+                    <span>{{ person.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.mapLocationLat">Map Location Lat</span></dt>
+                <dd>
+                    <span>{{ person.mapLocationLat }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.mapLocationLng">Map Location Lng</span></dt>
+                <dd>
+                    <span>{{ person.mapLocationLng }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.comment">Comment</span></dt>
+                <dd>
+                    <span>{{ person.comment }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/person', person.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

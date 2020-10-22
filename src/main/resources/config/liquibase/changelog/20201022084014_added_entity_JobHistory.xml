@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity JobHistory.
+    -->
+    <changeSet id="20201022084014-1" author="jhipster">
+        <createTable tableName="job_history">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="do_date" type="datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="expire_date" type="datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="comment" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="progress_percent" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="performer_id" type="bigint">
+                <constraints unique="true" nullable="false" uniqueConstraintName="ux_job_history_performer_id" />
+            </column>
+            <column name="job_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="job_history" columnName="do_date" columnDataType="datetime"/>
+        <dropDefaultValue tableName="job_history" columnName="expire_date" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20201022084014-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20201022084014-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/job_history.csv"
+                  separator=";"
+                  tableName="job_history">
+            <column name="id" type="numeric"/>
+            <column name="do_date" type="datetime"/>
+            <column name="expire_date" type="datetime"/>
+            <column name="comment" type="string"/>
+            <column name="progress_percent" type="numeric"/>
+            <column name="performer_id" type="numeric"/>
+            <column name="job_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

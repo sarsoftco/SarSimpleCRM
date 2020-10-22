@@ -1,0 +1,124 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-job-history-heading" jhiTranslate="simpleCrmApp.jobHistory.home.createOrEditLabel">Create or edit a Job History</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.doDate" for="field_doDate">Do Date</label>
+                    <div class="d-flex">
+                        <input id="field_doDate" type="datetime-local" class="form-control" name="doDate" formControlName="doDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('doDate')!.invalid && (editForm.get('doDate')!.dirty || editForm.get('doDate')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('doDate')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('doDate')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.expireDate" for="field_expireDate">Expire Date</label>
+                    <div class="d-flex">
+                        <input id="field_expireDate" type="datetime-local" class="form-control" name="expireDate" formControlName="expireDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('expireDate')!.invalid && (editForm.get('expireDate')!.dirty || editForm.get('expireDate')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('expireDate')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('expireDate')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.comment" for="field_comment">Comment</label>
+                    <input type="text" class="form-control" name="comment" id="field_comment"
+                           formControlName="comment"/>
+                    <div *ngIf="editForm.get('comment')!.invalid && (editForm.get('comment')!.dirty || editForm.get('comment')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('comment')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.progressPercent" for="field_progressPercent">Progress Percent</label>
+                    <input type="number" class="form-control" name="progressPercent" id="field_progressPercent"
+                           formControlName="progressPercent"/>
+                    <div *ngIf="editForm.get('progressPercent')!.invalid && (editForm.get('progressPercent')!.dirty || editForm.get('progressPercent')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('progressPercent')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('progressPercent')?.errors?.min" jhiTranslate="entity.validation.min" [translateValues]="{ min: 0 }">
+                            This field should be at least 0.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('progressPercent')?.errors?.max" jhiTranslate="entity.validation.max" [translateValues]="{ max: 100 }">
+                            This field cannot be more than 100.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('progressPercent')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.performer" for="field_performer">Performer</label>
+                    <select class="form-control" id="field_performer" name="performer" formControlName="performerId">
+                        <option *ngIf="!editForm.get('performerId')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="personOption.id" *ngFor="let personOption of performers; trackBy: trackById">{{ personOption.id }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('performerId')!.invalid && (editForm.get('performerId')!.dirty || editForm.get('performerId')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('performerId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.jobHistory.job" for="field_job">Job</label>
+                    <select class="form-control" id="field_job" name="job" formControlName="jobId">
+                        <option *ngIf="!editForm.get('jobId')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="jobOption.id" *ngFor="let jobOption of jobs; trackBy: trackById">{{ jobOption.id }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('jobId')!.invalid && (editForm.get('jobId')!.dirty || editForm.get('jobId')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('jobId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

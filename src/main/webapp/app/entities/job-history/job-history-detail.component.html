@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="jobHistory">
+            <h2><span jhiTranslate="simpleCrmApp.jobHistory.detail.title">Job History</span> {{ jobHistory.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.doDate">Do Date</span></dt>
+                <dd>
+                    <span>{{ jobHistory.doDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.expireDate">Expire Date</span></dt>
+                <dd>
+                    <span>{{ jobHistory.expireDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.comment">Comment</span></dt>
+                <dd>
+                    <span>{{ jobHistory.comment }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.progressPercent">Progress Percent</span></dt>
+                <dd>
+                    <span>{{ jobHistory.progressPercent }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.performer">Performer</span></dt>
+                <dd>
+                    <div *ngIf="jobHistory.performerId">
+                        <a [routerLink]="['/person', jobHistory.performerId, 'view']">{{ jobHistory.performerId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.jobHistory.job">Job</span></dt>
+                <dd>
+                    <div *ngIf="jobHistory.jobId">
+                        <a [routerLink]="['/job', jobHistory.jobId, 'view']">{{ jobHistory.jobId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/job-history', jobHistory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

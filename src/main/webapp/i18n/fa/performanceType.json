@@ -1,0 +1,24 @@
+{
+  "simpleCrmApp": {
+    "performanceType": {
+      "home": {
+        "title": "Performance Types",
+        "createLabel": "Create a new Performance Type",
+        "createOrEditLabel": "Create or edit a Performance Type",
+        "notFound": "No Performance Types found"
+      },
+      "created": "A new Performance Type is created with identifier {{ param }}",
+      "updated": "A Performance Type is updated with identifier {{ param }}",
+      "deleted": "A Performance Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Performance Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Performance Type"
+      },
+      "title": "Title",
+      "comment": "Comment",
+      "performance": "Performance"
+    }
+  }
+}

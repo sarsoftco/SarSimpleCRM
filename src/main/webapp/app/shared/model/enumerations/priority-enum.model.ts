@@ -1,0 +1,9 @@
+export const enum PriorityEnum {
+  NON_SIGNIFICANT = 'NON_SIGNIFICANT',
+
+  NORMAL = 'NORMAL',
+
+  IMPORTANT = 'IMPORTANT',
+
+  VERY_IMPORTANT = 'VERY_IMPORTANT',
+}

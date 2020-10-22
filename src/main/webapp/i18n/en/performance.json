@@ -1,0 +1,25 @@
+{
+  "simpleCrmApp": {
+    "performance": {
+      "home": {
+        "title": "Performances",
+        "createLabel": "Create a new Performance",
+        "createOrEditLabel": "Create or edit a Performance",
+        "notFound": "No Performances found"
+      },
+      "created": "A new Performance is created with identifier {{ param }}",
+      "updated": "A Performance is updated with identifier {{ param }}",
+      "deleted": "A Performance is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Performance {{ id }}?"
+      },
+      "detail": {
+        "title": "Performance"
+      },
+      "comment": "Comment",
+      "job": "Job",
+      "person": "Person",
+      "performanceType": "Performance Type"
+    }
+  }
+}

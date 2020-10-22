@@ -1,0 +1,34 @@
+{
+  "name": "PerformanceType",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "performance",
+      "otherEntityRelationshipName": "performanceType",
+      "relationshipName": "performance"
+    }
+  ],
+  "changelogDate": "20201022083914",
+  "entityTableName": "performance_type",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "microserviceName": "SimpleCRM"
+}

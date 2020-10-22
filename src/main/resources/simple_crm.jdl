@@ -1,0 +1,62 @@
+enum SexEnum {
+	MALE,
+    FEMALE
+}
+
+enum PriorityEnum {
+    NON_SIGNIFICANT,
+	NORMAL,
+    IMPORTANT,
+    VERY_IMPORTANT
+}
+
+entity Person {
+    name String required,
+    birthDate ZonedDateTime,
+    sex SexEnum,
+    address String,
+    mapLocationLat String,
+    mapLocationLng String,
+    comment String
+}
+
+entity Job {
+	title String required,
+	createDate ZonedDateTime required,
+	doneDate ZonedDateTime required,
+	comment String,
+    periority PriorityEnum
+}
+
+entity Performance {
+    comment String
+}
+
+entity PerformanceType {
+	title String required,
+    comment String
+}
+
+entity JobHistory {
+	doDate ZonedDateTime required,
+    expireDate ZonedDateTime required,
+	comment String required,
+    progressPercent Integer min(0) max(100) required
+}
+
+relationship OneToOne {
+	JobHistory{performer required} to Person,
+    Job to Performance
+}
+
+relationship OneToMany {
+	Person to Job{creator required},
+    Job to JobHistory{job required},
+    Person to Performance{person required},
+    PerformanceType to Performance{performanceType required}
+}
+
+dto * with mapstruct
+paginate * with pagination
+service * with serviceClass
+microservice * with SimpleCRM

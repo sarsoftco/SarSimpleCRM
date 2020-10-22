@@ -1,0 +1,46 @@
+{
+  "name": "Performance",
+  "fields": [
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "performance",
+      "relationshipName": "job",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "performance",
+      "relationshipValidateRules": "required",
+      "relationshipName": "person",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "performanceType",
+      "otherEntityRelationshipName": "performance",
+      "relationshipValidateRules": "required",
+      "relationshipName": "performanceType",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201022083814",
+  "entityTableName": "performance",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "microserviceName": "SimpleCRM"
+}

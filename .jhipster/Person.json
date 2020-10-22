@@ -1,0 +1,61 @@
+{
+  "name": "Person",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "sex",
+      "fieldType": "SexEnum",
+      "fieldValues": "MALE,FEMALE"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mapLocationLat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mapLocationLng",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "job"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "performance",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "performance"
+    }
+  ],
+  "changelogDate": "20201022083614",
+  "entityTableName": "person",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "microserviceName": "SimpleCRM"
+}

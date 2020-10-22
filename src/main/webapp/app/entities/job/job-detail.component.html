@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="job">
+            <h2><span jhiTranslate="simpleCrmApp.job.detail.title">Job</span> {{ job.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="simpleCrmApp.job.title">Title</span></dt>
+                <dd>
+                    <span>{{ job.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.createDate">Create Date</span></dt>
+                <dd>
+                    <span>{{ job.createDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.doneDate">Done Date</span></dt>
+                <dd>
+                    <span>{{ job.doneDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.comment">Comment</span></dt>
+                <dd>
+                    <span>{{ job.comment }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.periority">Periority</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'simpleCrmApp.PriorityEnum.' + job.periority }}">{{ job.periority }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.performance">Performance</span></dt>
+                <dd>
+                    <div *ngIf="job.performanceId">
+                        <a [routerLink]="['/performance', job.performanceId, 'view']">{{ job.performanceId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.job.creator">Creator</span></dt>
+                <dd>
+                    <div *ngIf="job.creatorId">
+                        <a [routerLink]="['/person', job.creatorId, 'view']">{{ job.creatorId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/job', job.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
