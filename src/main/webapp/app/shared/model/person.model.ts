@@ -9,8 +9,8 @@ export interface IPerson {
   birthDate?: Moment;
   sex?: SexEnum;
   address?: string;
-  mapLocationLat?: string;
-  mapLocationLng?: string;
+  phone?: string;
+  mobile?: string;
   comment?: string;
   jobs?: IJob[];
   performances?: IPerformance[];
@@ -23,8 +23,8 @@ export class Person implements IPerson {
     public birthDate?: Moment,
     public sex?: SexEnum,
     public address?: string,
-    public mapLocationLat?: string,
-    public mapLocationLng?: string,
+    public phone?: string,
+    public mobile?: string,
     public comment?: string,
     public jobs?: IJob[],
     public performances?: IPerformance[]

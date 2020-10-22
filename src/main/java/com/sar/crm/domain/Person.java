@@ -39,11 +39,11 @@ public class Person implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "map_location_lat")
-    private String mapLocationLat;
+    @Column(name = "phone")
+    private String phone;
 
-    @Column(name = "map_location_lng")
-    private String mapLocationLng;
+    @Column(name = "mobile")
+    private String mobile;
 
     @Column(name = "comment")
     private String comment;
@@ -115,30 +115,30 @@ public class Person implements Serializable {
         this.address = address;
     }
 
-    public String getMapLocationLat() {
-        return mapLocationLat;
+    public String getPhone() {
+        return phone;
     }
 
-    public Person mapLocationLat(String mapLocationLat) {
-        this.mapLocationLat = mapLocationLat;
+    public Person phone(String phone) {
+        this.phone = phone;
         return this;
     }
 
-    public void setMapLocationLat(String mapLocationLat) {
-        this.mapLocationLat = mapLocationLat;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getMapLocationLng() {
-        return mapLocationLng;
+    public String getMobile() {
+        return mobile;
     }
 
-    public Person mapLocationLng(String mapLocationLng) {
-        this.mapLocationLng = mapLocationLng;
+    public Person mobile(String mobile) {
+        this.mobile = mobile;
         return this;
     }
 
-    public void setMapLocationLng(String mapLocationLng) {
-        this.mapLocationLng = mapLocationLng;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getComment() {
@@ -230,8 +230,8 @@ public class Person implements Serializable {
             ", birthDate='" + getBirthDate() + "'" +
             ", sex='" + getSex() + "'" +
             ", address='" + getAddress() + "'" +
-            ", mapLocationLat='" + getMapLocationLat() + "'" +
-            ", mapLocationLng='" + getMapLocationLng() + "'" +
+            ", mapLocationLat='" + getPhone() + "'" +
+            ", mapLocationLng='" + getMobile() + "'" +
             ", comment='" + getComment() + "'" +
             "}";
     }

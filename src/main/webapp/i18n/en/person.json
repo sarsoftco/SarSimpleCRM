@@ -20,8 +20,8 @@
       "birthDate": "Birth Date",
       "sex": "Sex",
       "address": "Address",
-      "mapLocationLat": "Map Location Lat",
-      "mapLocationLng": "Map Location Lng",
+      "phone": "Phone",
+      "mobile": "Mobile",
       "comment": "Comment",
       "job": "Job",
       "performance": "Performance"

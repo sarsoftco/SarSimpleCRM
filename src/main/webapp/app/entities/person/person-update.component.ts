@@ -23,8 +23,8 @@ export class PersonUpdateComponent implements OnInit {
     birthDate: [],
     sex: [],
     address: [],
-    mapLocationLat: [],
-    mapLocationLng: [],
+    phone: [],
+    mobile: [],
     comment: [],
   });
 
@@ -48,8 +48,8 @@ export class PersonUpdateComponent implements OnInit {
       birthDate: person.birthDate ? person.birthDate.format(DATE_TIME_FORMAT) : null,
       sex: person.sex,
       address: person.address,
-      mapLocationLat: person.mapLocationLat,
-      mapLocationLng: person.mapLocationLng,
+      phone: person.phone,
+      mobile: person.mobile,
       comment: person.comment,
     });
   }
@@ -76,8 +76,8 @@ export class PersonUpdateComponent implements OnInit {
       birthDate: this.editForm.get(['birthDate'])!.value ? moment(this.editForm.get(['birthDate'])!.value, DATE_TIME_FORMAT) : undefined,
       sex: this.editForm.get(['sex'])!.value,
       address: this.editForm.get(['address'])!.value,
-      mapLocationLat: this.editForm.get(['mapLocationLat'])!.value,
-      mapLocationLng: this.editForm.get(['mapLocationLng'])!.value,
+      phone: this.editForm.get(['phone'])!.value,
+      mobile: this.editForm.get(['mobile'])!.value,
       comment: this.editForm.get(['comment'])!.value,
     };
   }

@@ -27,8 +27,8 @@
                     <th scope="col"  jhiSortBy="birthDate"><span jhiTranslate="simpleCrmApp.person.birthDate">Birth Date</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="sex"><span jhiTranslate="simpleCrmApp.person.sex">Sex</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="address"><span jhiTranslate="simpleCrmApp.person.address">Address</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="mapLocationLat"><span jhiTranslate="simpleCrmApp.person.mapLocationLat">Map Location Lat</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="mapLocationLng"><span jhiTranslate="simpleCrmApp.person.mapLocationLng">Map Location Lng</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="phone"><span jhiTranslate="simpleCrmApp.person.phone">Map Location Lat</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mobile"><span jhiTranslate="simpleCrmApp.person.mobile">Map Location Lng</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="comment"><span jhiTranslate="simpleCrmApp.person.comment">Comment</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
@@ -40,8 +40,8 @@
                     <td>{{ person.birthDate | date:'medium' }}</td>
                     <td jhiTranslate="{{ 'simpleCrmApp.SexEnum.' + person.sex }}">{{ person.sex }}</td>
                     <td>{{ person.address }}</td>
-                    <td>{{ person.mapLocationLat }}</td>
-                    <td>{{ person.mapLocationLng }}</td>
+                    <td>{{ person.phone }}</td>
+                    <td>{{ person.mobile }}</td>
                     <td>{{ person.comment }}</td>
                     <td class="text-right">
                         <div class="btn-group">

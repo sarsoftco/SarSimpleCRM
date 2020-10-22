@@ -9,7 +9,7 @@ import com.sar.crm.domain.enumeration.SexEnum;
  * A DTO for the {@link com.sar.crm.domain.Person} entity.
  */
 public class PersonDTO implements Serializable {
-    
+
     private Long id;
 
     @NotNull
@@ -21,13 +21,13 @@ public class PersonDTO implements Serializable {
 
     private String address;
 
-    private String mapLocationLat;
+    private String phone;
 
-    private String mapLocationLng;
+    private String mobile;
 
     private String comment;
 
-    
+
     public Long getId() {
         return id;
     }
@@ -68,20 +68,20 @@ public class PersonDTO implements Serializable {
         this.address = address;
     }
 
-    public String getMapLocationLat() {
-        return mapLocationLat;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setMapLocationLat(String mapLocationLat) {
-        this.mapLocationLat = mapLocationLat;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getMapLocationLng() {
-        return mapLocationLng;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMapLocationLng(String mapLocationLng) {
-        this.mapLocationLng = mapLocationLng;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getComment() {
@@ -118,8 +118,8 @@ public class PersonDTO implements Serializable {
             ", birthDate='" + getBirthDate() + "'" +
             ", sex='" + getSex() + "'" +
             ", address='" + getAddress() + "'" +
-            ", mapLocationLat='" + getMapLocationLat() + "'" +
-            ", mapLocationLng='" + getMapLocationLng() + "'" +
+            ", mapLocationLat='" + getPhone() + "'" +
+            ", mapLocationLng='" + getMobile() + "'" +
             ", comment='" + getComment() + "'" +
             "}";
     }
