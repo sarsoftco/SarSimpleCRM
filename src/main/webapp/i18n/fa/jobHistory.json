@@ -2,26 +2,26 @@
   "simpleCrmApp": {
     "jobHistory": {
       "home": {
-        "title": "Job Histories",
-        "createLabel": "Create a new Job History",
-        "createOrEditLabel": "Create or edit a Job History",
-        "notFound": "No Job Histories found"
+        "title": "گردش کار",
+        "createLabel": "ایجاد گردش کار جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش گردش کار",
+        "notFound": "گردش کاری یافت نشد"
       },
-      "created": "A new Job History is created with identifier {{ param }}",
-      "updated": "A Job History is updated with identifier {{ param }}",
-      "deleted": "A Job History is deleted with identifier {{ param }}",
+      "created": "گردش کار جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "گردش کار با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "گردش کار با شناسه {{ param }} حذف شد",
       "delete": {
-        "question": "Are you sure you want to delete Job History {{ id }}?"
+        "question": "آیا از حذف گردش کار با شناسه {{ id }} اطمینان دارید؟"
       },
       "detail": {
-        "title": "Job History"
+        "title": "گردش کار"
       },
-      "doDate": "Do Date",
-      "expireDate": "Expire Date",
-      "comment": "Comment",
-      "progressPercent": "Progress Percent",
-      "performer": "Performer",
-      "job": "Job"
+      "doDate": "تاریخ انجام",
+      "expireDate": "تاریخ اتمام",
+      "comment": "توضیحات",
+      "progressPercent": "درصد پیشرفت",
+      "performer": "انجام دهنده",
+      "job": "وظیفه"
     }
   }
 }

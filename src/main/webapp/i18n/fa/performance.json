@@ -2,24 +2,24 @@
   "simpleCrmApp": {
     "performance": {
       "home": {
-        "title": "Performances",
-        "createLabel": "Create a new Performance",
-        "createOrEditLabel": "Create or edit a Performance",
-        "notFound": "No Performances found"
+        "title": "عملیات",
+        "createLabel": "ایجاد عملیات جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش عملیات جدید",
+        "notFound": "عملیاتی ایجاد نشده است"
       },
-      "created": "A new Performance is created with identifier {{ param }}",
-      "updated": "A Performance is updated with identifier {{ param }}",
-      "deleted": "A Performance is deleted with identifier {{ param }}",
+      "created": "عملیات جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "عملیات با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "عملیات با شناسه {{ param }} حذف شد",
       "delete": {
-        "question": "Are you sure you want to delete Performance {{ id }}?"
+        "question": "آیا از حذف عملیات با شناسه {{ id }} اطمینان دارید؟"
       },
       "detail": {
-        "title": "Performance"
+        "title": "عملیات"
       },
-      "comment": "Comment",
-      "job": "Job",
-      "person": "Person",
-      "performanceType": "Performance Type"
+      "comment": "توضیحات",
+      "job": "وظیفه",
+      "person": "شخص",
+      "performanceType": "نوع عملیات"
     }
   }
 }

@@ -2,23 +2,23 @@
   "simpleCrmApp": {
     "performanceType": {
       "home": {
-        "title": "Performance Types",
-        "createLabel": "Create a new Performance Type",
-        "createOrEditLabel": "Create or edit a Performance Type",
-        "notFound": "No Performance Types found"
+        "title": "نوع عملیات",
+        "createLabel": "تعریف نوع عملیات جدید",
+        "createOrEditLabel": "تعریف یا ویرایش نوع عملیات",
+        "notFound": "نوع عملیاتی تعریف نشده است"
       },
-      "created": "A new Performance Type is created with identifier {{ param }}",
-      "updated": "A Performance Type is updated with identifier {{ param }}",
-      "deleted": "A Performance Type is deleted with identifier {{ param }}",
+      "created": "نوع عملیات جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "نوع عملیات با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "نوع عملیات با شناسه {{ param }} حذف شد",
       "delete": {
-        "question": "Are you sure you want to delete Performance Type {{ id }}?"
+        "question": "آیا از حذف نوع عملیات با شناسه {{ id }} اطمینان دارید؟"
       },
       "detail": {
-        "title": "Performance Type"
+        "title": "نوع عملیات"
       },
-      "title": "Title",
-      "comment": "Comment",
-      "performance": "Performance"
+      "title": "عنوان",
+      "comment": "توضیحات",
+      "performance": "عملیات"
     }
   }
 }

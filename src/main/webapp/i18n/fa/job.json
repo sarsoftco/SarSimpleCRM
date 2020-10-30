@@ -2,28 +2,28 @@
   "simpleCrmApp": {
     "job": {
       "home": {
-        "title": "Jobs",
-        "createLabel": "Create a new Job",
-        "createOrEditLabel": "Create or edit a Job",
-        "notFound": "No Jobs found"
+        "title": "وظایف",
+        "createLabel": "ایجاد وظیفه جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش وظیفه",
+        "notFound": "وظیفه‌ای یافت نشد"
       },
-      "created": "A new Job is created with identifier {{ param }}",
-      "updated": "A Job is updated with identifier {{ param }}",
-      "deleted": "A Job is deleted with identifier {{ param }}",
+      "created": "وظیفه جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "وظیفه با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "وظیفه با شناسه {{ param }} حذف شد",
       "delete": {
-        "question": "Are you sure you want to delete Job {{ id }}?"
+        "question": "آیا از حذف وظیفه با شناسه {{ id }} اطمینان دارید؟"
       },
       "detail": {
-        "title": "Job"
+        "title": "وظیفه"
       },
-      "title": "Title",
-      "createDate": "Create Date",
-      "doneDate": "Done Date",
-      "comment": "Comment",
-      "periority": "Periority",
-      "performance": "Performance",
-      "jobHistory": "Job History",
-      "creator": "Creator"
+      "title": "عنوان",
+      "createDate": "تاریخ ایجاد",
+      "doneDate": "تاریخ انجام",
+      "comment": "توضیحات",
+      "periority": "اولویت",
+      "performance": "عملیات",
+      "jobHistory": "گردش کار",
+      "creator": "ایجاد کننده"
     }
   }
 }

@@ -2,10 +2,10 @@
   "simpleCrmApp": {
     "PriorityEnum": {
       "null": "",
-      "NON_SIGNIFICANT": "NON_SIGNIFICANT",
-      "NORMAL": "NORMAL",
-      "IMPORTANT": "IMPORTANT",
-      "VERY_IMPORTANT": "VERY_IMPORTANT"
+      "NON_SIGNIFICANT": "کم اهمیت",
+      "NORMAL": "عادی",
+      "IMPORTANT": "مهم",
+      "VERY_IMPORTANT": "خیلی مهم"
     }
   }
 }

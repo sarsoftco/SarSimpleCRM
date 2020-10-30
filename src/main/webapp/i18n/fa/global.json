@@ -1,17 +1,17 @@
 {
   "global": {
-    "title": "SimpleCRM",
+    "title": "مدیریت مشتری",
     "browsehappy": "شما از مرورگر <strong>قدیمی</strong> استفاده می‌کنید. لطفا <a href=\"http://browsehappy.com/?locale=en\">مرورگر خود را به روز کنید</a>",
     "menu": {
       "home": "خانه",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "ماهیت ها",
-        "person": "Person",
-        "job": "Job",
-        "performance": "Performance",
-        "performanceType": "Performance Type",
-        "jobHistory": "Job History",
+        "person": "شخص",
+        "job": "وظیفه",
+        "performance": "عملیات",
+        "performanceType": "نوع عملیات",
+        "jobHistory": "گردش کار",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -41,8 +41,8 @@
     "form": {
       "username.label": "نام کاربری",
       "username.placeholder": "نام کاربری شما",
-      "currentpassword.label": "Current password",
-      "currentpassword.placeholder": "Current password",
+      "currentpassword.label": "رمز عبور فعلی",
+      "currentpassword.placeholder": "رمز عبور فعلی",
       "newpassword.label": "رمزعبور جدید",
       "newpassword.placeholder": "رمزعبور جدید",
       "confirmpassword.label": "تصدیق رمزعبور جدید",
@@ -134,11 +134,11 @@
     "userexists": "این نام کاربر در سیستم وجود دارد!",
     "emailexists": "این آدرس ایمیل در سیستم وجود دارد!",
     "idexists": "موجودیت جدید {{ entityName }} نمی‌تواند شناسه داشته‌باشد.",
-    "idnull": "Invalid ID",
+    "idnull": "شناسه اشتباه",
     "file": {
-      "could.not.extract": "Could not extract file",
-      "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+      "could.not.extract": "امکان استخراج فایل وجود ندارد",
+      "not.image": "فایل تصویر باید استفاده شود نه فایل \"{{ fileType }}\""
     }
   },
-  "footer": "این پاورقی است"
+  "footer": "گروه نرم افزاری سار"
 }

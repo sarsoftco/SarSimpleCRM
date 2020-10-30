@@ -2,8 +2,8 @@
   "simpleCrmApp": {
     "SexEnum": {
       "null": "",
-      "MALE": "MALE",
-      "FEMALE": "FEMALE"
+      "MALE": "آقا",
+      "FEMALE": "خانم"
     }
   }
 }

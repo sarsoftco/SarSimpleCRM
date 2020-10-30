@@ -2,29 +2,29 @@
   "simpleCrmApp": {
     "person": {
       "home": {
-        "title": "People",
-        "createLabel": "Create a new Person",
-        "createOrEditLabel": "Create or edit a Person",
-        "notFound": "No People found"
+        "title": "اشخاص",
+        "createLabel": "ایجاد شخص جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش شخص",
+        "notFound": "شخصی یافت نشد"
       },
-      "created": "A new Person is created with identifier {{ param }}",
-      "updated": "A Person is updated with identifier {{ param }}",
-      "deleted": "A Person is deleted with identifier {{ param }}",
+      "created": "شخص جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "شخص جدید با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "شخص جدید با شناسه {{ param }} حذف شد",
       "delete": {
-        "question": "Are you sure you want to delete Person {{ id }}?"
+        "question": "آیا از حذف شخص با شناسه {{ id }} اطمینان دارید؟"
       },
       "detail": {
-        "title": "Person"
+        "title": "شخص"
       },
-      "name": "Name",
-      "birthDate": "Birth Date",
-      "sex": "Sex",
-      "address": "Address",
-      "phone": "Phone",
-      "mobile": "Mobile",
-      "comment": "Comment",
-      "job": "Job",
-      "performance": "Performance"
+      "name": "نام",
+      "birthDate": "تاریخ تولد",
+      "sex": "جنسیت",
+      "address": "آدرس",
+      "phone": "تلفن ثابت",
+      "mobile": "تلفن همراه",
+      "comment": "توضیحات",
+      "job": "وظیفه",
+      "performance": "عملیات"
     }
   }
 }
