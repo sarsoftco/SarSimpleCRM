@@ -12,6 +12,7 @@
         "performance": "Performance",
         "performanceType": "Performance Type",
         "jobHistory": "Job History",
+        "setting": "Setting",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

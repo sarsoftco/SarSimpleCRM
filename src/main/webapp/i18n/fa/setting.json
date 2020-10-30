@@ -1,0 +1,23 @@
+{
+  "simpleCrmApp": {
+    "setting": {
+      "home": {
+        "title": "تنظیمات",
+        "createLabel": "تعریف تنظیم جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش تنظیم",
+        "notFound": "تنظیماتی یافت نشد"
+      },
+      "created": "تنظیم جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "تنظیم با شناسه {{ param }} ویرایش شد",
+      "deleted": "تنظیم با شناسه {{ param }} حذف شد",
+      "delete": {
+        "question": "آیا از حذف تنظیم با شناسه {{ id }} اطمینان دارید؟"
+      },
+      "detail": {
+        "title": "تنظیم"
+      },
+      "title": "عنوان",
+      "value": "مقدار"
+    }
+  }
+}

@@ -12,6 +12,7 @@
         "performance": "عملیات",
         "performanceType": "نوع عملیات",
         "jobHistory": "گردش کار",
+        "setting": "تنظیمات",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

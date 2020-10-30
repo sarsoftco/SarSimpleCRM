@@ -1,0 +1,9 @@
+{
+  "simpleCrmApp": {
+    "SettingEnum": {
+      "null": "",
+      "TEXT_MESSAGE_USER_NAME": "نام کاربری سامانه پیامک متنی",
+      "TEXT_MESSAGE_PASSWORD": "کلمه عبور سامانه پیامک متنی"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "simpleCrmApp": {
+    "setting": {
+      "home": {
+        "title": "Settings",
+        "createLabel": "Create a new Setting",
+        "createOrEditLabel": "Create or edit a Setting",
+        "notFound": "No Settings found"
+      },
+      "created": "A new Setting is created with identifier {{ param }}",
+      "updated": "A Setting is updated with identifier {{ param }}",
+      "deleted": "A Setting is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Setting {{ id }}?"
+      },
+      "detail": {
+        "title": "Setting"
+      },
+      "title": "Title",
+      "value": "Value"
+    }
+  }
+}

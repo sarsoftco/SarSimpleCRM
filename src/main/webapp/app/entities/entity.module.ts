@@ -24,6 +24,10 @@ import { RouterModule } from '@angular/router';
         path: 'job-history',
         loadChildren: () => import('./job-history/job-history.module').then(m => m.SimpleCrmJobHistoryModule),
       },
+      {
+        path: 'setting',
+        loadChildren: () => import('./setting/setting.module').then(m => m.SimpleCrmSettingModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

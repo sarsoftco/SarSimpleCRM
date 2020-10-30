@@ -1,0 +1,9 @@
+{
+  "simpleCrmApp": {
+    "SettingEnum": {
+      "null": "",
+      "TEXT_MESSAGE_USER_NAME": "TEXT_MESSAGE_USER_NAME",
+      "TEXT_MESSAGE_PASSWORD": "TEXT_MESSAGE_PASSWORD"
+    }
+  }
+}
