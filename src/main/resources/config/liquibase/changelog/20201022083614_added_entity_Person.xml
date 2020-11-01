@@ -27,14 +27,17 @@
             <column name="address" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="comment" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="phone" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="mobile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="comment" type="varchar(255)">
-                <constraints nullable="true" />
+            <column name="city_id" type="bigint">
+                <constraints unique="true" nullable="false" uniqueConstraintName="ux_person_city_id" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
@@ -64,9 +67,10 @@
             <column name="birth_date" type="datetime"/>
             <column name="sex" type="string"/>
             <column name="address" type="string"/>
+            <column name="comment" type="string"/>
             <column name="phone" type="string"/>
             <column name="mobile" type="string"/>
-            <column name="comment" type="string"/>
+            <column name="city_id" type="numeric"/>
             &lt;!&ndash; jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here &ndash;&gt;
         </loadData>
     </changeSet>-->

@@ -1,0 +1,22 @@
+{
+  "simpleCrmApp": {
+    "province": {
+      "home": {
+        "title": "Provinces",
+        "createLabel": "Create a new Province",
+        "createOrEditLabel": "Create or edit a Province",
+        "notFound": "No Provinces found"
+      },
+      "created": "A new Province is created with identifier {{ param }}",
+      "updated": "A Province is updated with identifier {{ param }}",
+      "deleted": "A Province is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Province {{ id }}?"
+      },
+      "detail": {
+        "title": "Province"
+      },
+      "title": "Title"
+    }
+  }
+}

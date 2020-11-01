@@ -1,0 +1,23 @@
+{
+  "simpleCrmApp": {
+    "product": {
+      "home": {
+        "title": "محصولات",
+        "createLabel": "ایجاد محصول جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش محصول",
+        "notFound": "محصولی یاقت نشد"
+      },
+      "created": "محصول جدید با شناسه {{ param }} اضافه گردید",
+      "updated": "محصول با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "محصول با شناسه {{ param }} حذف شد",
+      "delete": {
+        "question": "آیا از حذف محصول با شناسه {{ id }} اطمینان دارید؟"
+      },
+      "detail": {
+        "title": "محصول"
+      },
+      "title": "عنوان",
+      "performance": "عملیات"
+    }
+  }
+}

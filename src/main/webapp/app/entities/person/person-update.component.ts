@@ -4,11 +4,14 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import * as moment from 'moment';
 import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
 
 import { IPerson, Person } from 'app/shared/model/person.model';
 import { PersonService } from './person.service';
+import { ICity } from 'app/shared/model/city.model';
+import { CityService } from 'app/entities/city/city.service';
 
 @Component({
   selector: 'jhi-person-update',
@@ -16,6 +19,7 @@ import { PersonService } from './person.service';
 })
 export class PersonUpdateComponent implements OnInit {
   isSaving = false;
+  cities: ICity[] = [];
 
   editForm = this.fb.group({
     id: [],
@@ -23,12 +27,18 @@ export class PersonUpdateComponent implements OnInit {
     birthDate: [],
     sex: [],
     address: [],
+    comment: [],
     phone: [],
     mobile: [],
-    comment: [],
+    cityId: [null, Validators.required],
   });
 
-  constructor(protected personService: PersonService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
+  constructor(
+    protected personService: PersonService,
+    protected cityService: CityService,
+    protected activatedRoute: ActivatedRoute,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ person }) => {
@@ -38,6 +48,28 @@ export class PersonUpdateComponent implements OnInit {
       }
 
       this.updateForm(person);
+
+      this.cityService
+        .query({ filter: 'person-is-null' })
+        .pipe(
+          map((res: HttpResponse<ICity[]>) => {
+            return res.body || [];
+          })
+        )
+        .subscribe((resBody: ICity[]) => {
+          if (!person.cityId) {
+            this.cities = resBody;
+          } else {
+            this.cityService
+              .find(person.cityId)
+              .pipe(
+                map((subRes: HttpResponse<ICity>) => {
+                  return subRes.body ? [subRes.body].concat(resBody) : resBody;
+                })
+              )
+              .subscribe((concatRes: ICity[]) => (this.cities = concatRes));
+          }
+        });
     });
   }
 
@@ -48,9 +80,10 @@ export class PersonUpdateComponent implements OnInit {
       birthDate: person.birthDate ? person.birthDate.format(DATE_TIME_FORMAT) : null,
       sex: person.sex,
       address: person.address,
+      comment: person.comment,
       phone: person.phone,
       mobile: person.mobile,
-      comment: person.comment,
+      cityId: person.cityId,
     });
   }
 
@@ -76,9 +109,10 @@ export class PersonUpdateComponent implements OnInit {
       birthDate: this.editForm.get(['birthDate'])!.value ? moment(this.editForm.get(['birthDate'])!.value, DATE_TIME_FORMAT) : undefined,
       sex: this.editForm.get(['sex'])!.value,
       address: this.editForm.get(['address'])!.value,
+      comment: this.editForm.get(['comment'])!.value,
       phone: this.editForm.get(['phone'])!.value,
       mobile: this.editForm.get(['mobile'])!.value,
-      comment: this.editForm.get(['comment'])!.value,
+      cityId: this.editForm.get(['cityId'])!.value,
     };
   }
 
@@ -96,5 +130,9 @@ export class PersonUpdateComponent implements OnInit {
 
   protected onSaveError(): void {
     this.isSaving = false;
+  }
+
+  trackById(index: number, item: ICity): any {
+    return item.id;
   }
 }

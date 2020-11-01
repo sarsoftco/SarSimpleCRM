@@ -39,20 +39,25 @@ public class Person implements Serializable {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "comment")
+    private String comment;
+
     @Column(name = "phone")
     private String phone;
 
     @Column(name = "mobile")
     private String mobile;
 
-    @Column(name = "comment")
-    private String comment;
-
     @OneToMany(mappedBy = "creator")
     private Set<Job> jobs = new HashSet<>();
 
     @OneToMany(mappedBy = "person")
     private Set<Performance> performances = new HashSet<>();
+
+    @OneToOne(optional = false)
+    @NotNull
+    @JoinColumn(unique = true)
+    private City city;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -115,6 +120,19 @@ public class Person implements Serializable {
         this.address = address;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public Person comment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -139,19 +157,6 @@ public class Person implements Serializable {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public Person comment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 
     public Set<Job> getJobs() {
@@ -203,6 +208,19 @@ public class Person implements Serializable {
     public void setPerformances(Set<Performance> performances) {
         this.performances = performances;
     }
+
+    public City getCity() {
+        return city;
+    }
+
+    public Person city(City city) {
+        this.city = city;
+        return this;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -230,9 +248,9 @@ public class Person implements Serializable {
             ", birthDate='" + getBirthDate() + "'" +
             ", sex='" + getSex() + "'" +
             ", address='" + getAddress() + "'" +
-            ", mapLocationLat='" + getPhone() + "'" +
-            ", mapLocationLng='" + getMobile() + "'" +
             ", comment='" + getComment() + "'" +
+            ", phone='" + getPhone() + "'" +
+            ", mobile='" + getMobile() + "'" +
             "}";
     }
 }

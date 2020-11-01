@@ -9,7 +9,7 @@ import com.sar.crm.domain.enumeration.SexEnum;
  * A DTO for the {@link com.sar.crm.domain.Person} entity.
  */
 public class PersonDTO implements Serializable {
-
+    
     private Long id;
 
     @NotNull
@@ -21,13 +21,15 @@ public class PersonDTO implements Serializable {
 
     private String address;
 
+    private String comment;
+
     private String phone;
 
     private String mobile;
 
-    private String comment;
 
-
+    private Long cityId;
+    
     public Long getId() {
         return id;
     }
@@ -68,6 +70,14 @@ public class PersonDTO implements Serializable {
         this.address = address;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -84,12 +94,12 @@ public class PersonDTO implements Serializable {
         this.mobile = mobile;
     }
 
-    public String getComment() {
-        return comment;
+    public Long getCityId() {
+        return cityId;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setCityId(Long cityId) {
+        this.cityId = cityId;
     }
 
     @Override
@@ -118,9 +128,10 @@ public class PersonDTO implements Serializable {
             ", birthDate='" + getBirthDate() + "'" +
             ", sex='" + getSex() + "'" +
             ", address='" + getAddress() + "'" +
-            ", mapLocationLat='" + getPhone() + "'" +
-            ", mapLocationLng='" + getMobile() + "'" +
             ", comment='" + getComment() + "'" +
+            ", phone='" + getPhone() + "'" +
+            ", mobile='" + getMobile() + "'" +
+            ", cityId=" + getCityId() +
             "}";
     }
 }

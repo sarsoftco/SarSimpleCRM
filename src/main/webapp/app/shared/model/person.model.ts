@@ -1,6 +1,6 @@
 import { Moment } from 'moment';
-import { IJob } from 'app/shared/model/job.model';
-import { IPerformance } from 'app/shared/model/performance.model';
+import { IJob } from 'app/shared/model/SimpleCRM/job.model';
+import { IPerformance } from 'app/shared/model/SimpleCRM/performance.model';
 import { SexEnum } from 'app/shared/model/enumerations/sex-enum.model';
 
 export interface IPerson {
@@ -9,11 +9,12 @@ export interface IPerson {
   birthDate?: Moment;
   sex?: SexEnum;
   address?: string;
+  comment?: string;
   phone?: string;
   mobile?: string;
-  comment?: string;
   jobs?: IJob[];
   performances?: IPerformance[];
+  cityId?: number;
 }
 
 export class Person implements IPerson {
@@ -23,10 +24,11 @@ export class Person implements IPerson {
     public birthDate?: Moment,
     public sex?: SexEnum,
     public address?: string,
+    public comment?: string,
     public phone?: string,
     public mobile?: string,
-    public comment?: string,
     public jobs?: IJob[],
-    public performances?: IPerformance[]
+    public performances?: IPerformance[],
+    public cityId?: number
   ) {}
 }

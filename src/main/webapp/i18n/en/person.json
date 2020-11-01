@@ -20,11 +20,12 @@
       "birthDate": "Birth Date",
       "sex": "Sex",
       "address": "Address",
+      "comment": "Comment",
       "phone": "Phone",
       "mobile": "Mobile",
-      "comment": "Comment",
       "job": "Job",
-      "performance": "Performance"
+      "performance": "Performance",
+      "city": "City"
     }
   }
 }

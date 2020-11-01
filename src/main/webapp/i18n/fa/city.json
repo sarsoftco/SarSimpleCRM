@@ -1,0 +1,23 @@
+{
+  "simpleCrmApp": {
+    "city": {
+      "home": {
+        "title": "شهرها",
+        "createLabel": "افزودن شهر جدید",
+        "createOrEditLabel": "افزودن یا ویرایش شهر",
+        "notFound": "شهری وجود ندارد"
+      },
+      "created": "شهر جدید با شناسه {{ param }} اضافه گردید",
+      "updated": "شهر با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "شهر با شناسه {{ param }} حذف شد",
+      "delete": {
+        "question": "آیا از حذف شهر با شناسه {{ id }} اطمینان دارید؟"
+      },
+      "detail": {
+        "title": "شهر"
+      },
+      "title": "عنوان",
+      "province": "استان"
+    }
+  }
+}

@@ -20,11 +20,12 @@
       "birthDate": "تاریخ تولد",
       "sex": "جنسیت",
       "address": "آدرس",
+      "comment": "توضیحات",
       "phone": "تلفن ثابت",
       "mobile": "تلفن همراه",
-      "comment": "توضیحات",
       "job": "وظیفه",
-      "performance": "عملیات"
+      "performance": "عملیات",
+      "city": "شهر"
     }
   }
 }

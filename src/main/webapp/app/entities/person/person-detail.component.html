@@ -24,17 +24,23 @@
                 <dd>
                     <span>{{ person.address }}</span>
                 </dd>
-                <dt><span jhiTranslate="simpleCrmApp.person.phone">Map Location Lat</span></dt>
-                <dd>
-                    <span>{{ person.phone }}</span>
-                </dd>
-                <dt><span jhiTranslate="simpleCrmApp.person.mobile">Map Location Lng</span></dt>
-                <dd>
-                    <span>{{ person.mobile }}</span>
-                </dd>
                 <dt><span jhiTranslate="simpleCrmApp.person.comment">Comment</span></dt>
                 <dd>
                     <span>{{ person.comment }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.phone">Phone</span></dt>
+                <dd>
+                    <span>{{ person.phone }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.mobile">Mobile</span></dt>
+                <dd>
+                    <span>{{ person.mobile }}</span>
+                </dd>
+                <dt><span jhiTranslate="simpleCrmApp.person.city">City</span></dt>
+                <dd>
+                    <div *ngIf="person.cityId">
+                        <a [routerLink]="['/city', person.cityId, 'view']">{{ person.cityId }}</a>
+                    </div>
                 </dd>
             </dl>
 

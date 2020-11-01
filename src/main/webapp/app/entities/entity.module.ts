@@ -28,6 +28,18 @@ import { RouterModule } from '@angular/router';
         path: 'setting',
         loadChildren: () => import('./setting/setting.module').then(m => m.SimpleCrmSettingModule),
       },
+      {
+        path: 'province',
+        loadChildren: () => import('./province/province.module').then(m => m.SimpleCrmProvinceModule),
+      },
+      {
+        path: 'city',
+        loadChildren: () => import('./city/city.module').then(m => m.SimpleCrmCityModule),
+      },
+      {
+        path: 'product',
+        loadChildren: () => import('./product/product.module').then(m => m.SimpleCrmProductModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

@@ -27,9 +27,10 @@
                     <th scope="col"  jhiSortBy="birthDate"><span jhiTranslate="simpleCrmApp.person.birthDate">Birth Date</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="sex"><span jhiTranslate="simpleCrmApp.person.sex">Sex</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="address"><span jhiTranslate="simpleCrmApp.person.address">Address</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="phone"><span jhiTranslate="simpleCrmApp.person.phone">Map Location Lat</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="mobile"><span jhiTranslate="simpleCrmApp.person.mobile">Map Location Lng</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="comment"><span jhiTranslate="simpleCrmApp.person.comment">Comment</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="phone"><span jhiTranslate="simpleCrmApp.person.phone">Phone</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mobile"><span jhiTranslate="simpleCrmApp.person.mobile">Mobile</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cityId"><span jhiTranslate="simpleCrmApp.person.city">City</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -40,9 +41,14 @@
                     <td>{{ person.birthDate | date:'medium' }}</td>
                     <td jhiTranslate="{{ 'simpleCrmApp.SexEnum.' + person.sex }}">{{ person.sex }}</td>
                     <td>{{ person.address }}</td>
+                    <td>{{ person.comment }}</td>
                     <td>{{ person.phone }}</td>
                     <td>{{ person.mobile }}</td>
-                    <td>{{ person.comment }}</td>
+                    <td>
+                        <div *ngIf="person.cityId">
+                            <a [routerLink]="['/city', person.cityId , 'view']" >{{ person.cityId }}</a>
+                        </div>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

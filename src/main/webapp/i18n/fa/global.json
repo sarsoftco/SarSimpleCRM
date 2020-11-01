@@ -13,6 +13,9 @@
         "performanceType": "نوع عملیات",
         "jobHistory": "گردش کار",
         "setting": "تنظیمات",
+        "province": "استان",
+        "city": "شهر",
+        "product": "محصول",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -1,0 +1,22 @@
+{
+  "simpleCrmApp": {
+    "province": {
+      "home": {
+        "title": "استان‌ها",
+        "createLabel": "ایجاد استان جدید",
+        "createOrEditLabel": "ایجاد یا ویرایش استان",
+        "notFound": "استانی تعریف مشده است"
+      },
+      "created": "استان جدید با شناسه {{ param }} ایجاد گردید",
+      "updated": "استان با شناسه {{ param }} به روز رسانی شد",
+      "deleted": "استان با شناسه {{ param }} حذف شد",
+      "delete": {
+        "question": "آیا از حدف استان با شناسه {{ id }} اطمینان دارید؟"
+      },
+      "detail": {
+        "title": "استان"
+      },
+      "title": "عنوان"
+    }
+  }
+}

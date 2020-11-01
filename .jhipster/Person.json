@@ -20,15 +20,15 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "mapLocationLat",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "mapLocationLng",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobile",
       "fieldType": "String"
     }
   ],
@@ -44,6 +44,16 @@
       "otherEntityName": "performance",
       "otherEntityRelationshipName": "person",
       "relationshipName": "performance"
+    },
+    {
+      "relationshipName": "city",
+      "otherEntityName": "city",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "useJPADerivedIdentifier": false,
+      "otherEntityRelationshipName": "person"
     }
   ],
   "changelogDate": "20201022083614",
@@ -55,7 +65,8 @@
   "fluentMethods": true,
   "readOnly": false,
   "embedded": false,
-  "clientRootFolder": "",
   "applications": "*",
-  "microserviceName": "SimpleCRM"
+  "microserviceName": "SimpleCRM",
+  "searchEngine": false,
+  "databaseType": "sql"
 }

@@ -45,21 +45,35 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.phone" for="field_phone">Map Location Lat</label>
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.comment" for="field_comment">Comment</label>
+                    <input type="text" class="form-control" name="comment" id="field_comment"
+                           formControlName="comment"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.phone" for="field_phone">Phone</label>
                     <input type="text" class="form-control" name="phone" id="field_phone"
                            formControlName="phone"/>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.mobile" for="field_mobile">Map Location Lng</label>
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.mobile" for="field_mobile">Mobile</label>
                     <input type="text" class="form-control" name="mobile" id="field_mobile"
                            formControlName="mobile"/>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.comment" for="field_comment">Comment</label>
-                    <input type="text" class="form-control" name="comment" id="field_comment"
-                           formControlName="comment"/>
+                    <label class="form-control-label" jhiTranslate="simpleCrmApp.person.city" for="field_city">City</label>
+                    <select class="form-control" id="field_city" name="city" formControlName="cityId">
+                        <option *ngIf="!editForm.get('cityId')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="cityOption.id" *ngFor="let cityOption of cities; trackBy: trackById">{{ cityOption.id }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('cityId')!.invalid && (editForm.get('cityId')!.dirty || editForm.get('cityId')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('cityId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
                 </div>
             </div>
 
